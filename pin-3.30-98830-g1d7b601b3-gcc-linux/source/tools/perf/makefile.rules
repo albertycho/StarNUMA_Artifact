@@ -1,0 +1,110 @@
+#
+# Copyright (C) 2012-2023 Intel Corporation.
+# SPDX-License-Identifier: MIT
+#
+
+##############################################################
+#
+# This file includes all the test targets as well as all the
+# non-default build rules and test recipes.
+#
+##############################################################
+
+PIN := $(PIN_ROOT)/pin
+
+##############################################################
+#
+# Test targets
+#
+##############################################################
+
+###### Place all generic definitions here ######
+
+# This defines tests which run tools of the same name.  This is simply for convenience to avoid
+# defining the test name twice (once in TOOL_ROOTS and again in TEST_ROOTS).
+# Tests defined here should not be defined in TOOL_ROOTS and TEST_ROOTS.
+TEST_TOOL_ROOTS :=
+
+# This defines the tests to be run that were not already defined in TEST_TOOL_ROOTS.
+TEST_ROOTS :=
+
+# This defines the tools which will be run during the the tests, and were not already defined in
+# TEST_TOOL_ROOTS.
+TOOL_ROOTS :=
+
+# This defines all the applications that will be run during the tests.
+APP_ROOTS := syscall_app big
+
+###### Place architecture-specific definitions here ######
+
+TEST_ROOTS += syscall big inline
+
+RUNNABLE_TESTS := $(TEST_TOOL_ROOTS) $(TEST_ROOTS)
+
+###### Define the sanity subset ######
+
+# This defines the list of tests that should run in sanity. It should include all the tests listed in
+# TEST_TOOL_ROOTS and TEST_ROOTS excluding only unstable tests.
+SANITY_SUBSET := 
+
+##############################################################
+#
+# Test recipes
+#
+##############################################################
+
+*: dir
+
+# This section contains recipes for tests other than the default.
+# See makefile.default.rules for the default test rules.
+# All tests in this section should adhere to the naming convention: <testname>.test
+
+syscall.test: $(OBJDIR)syscall$(PINTOOL_SUFFIX) $(OBJDIR)syscall_app$(EXE_SUFFIX)
+	$(PIN) -t $(OBJDIR)syscall$(PINTOOL_SUFFIX) -- $(OBJDIR)syscall_app$(EXE_SUFFIX) --test Write
+
+big.test: $(OBJDIR)big$(EXE_SUFFIX)
+	$(PIN) -- $(OBJDIR)big$(EXE_SUFFIX)
+
+inline.test: $(TESTAPP) $(INSCOUNT_TOOL)
+	$(PIN) -t $(INSCOUNT_TOOL) -- $(TESTAPP) makefile.rules $(OBJDIR)tmp.txt -s
+	rm $(OBJDIR)tmp.txt
+
+##############################################################
+#
+# Build rules
+#
+##############################################################
+
+# This section contains the build rules for all binaries that have special build rules.
+# See makefile.default.rules for the default build rules.
+
+###### Special tools' build rules ######
+
+$(OBJDIR)syscall$(PINTOOL_SUFFIX): $(OBJDIR)syscall$(OBJ_SUFFIX)
+	$(LINKER) $(TOOL_LDFLAGS) $(LINK_EXE)$@ $^ $(TOOL_LPATHS) $(TOOL_LIBS)
+
+###### Special applications' build rules ######
+
+ifeq ($(TARGET_OS),linux)
+  APP_CXXFLAGS_NOOPT += -ftemplate-depth=100000
+else
+  APP_CXXFLAGS_NOOPT += /bigobj
+  APP_LDFLAGS_NOOPT += /STACK:20000000
+endif
+
+$(OBJDIR)syscall_app$(OBJ_SUFFIX): syscall_app.cpp
+	$(APP_CXX) $(APP_CXXFLAGS_NOOPT) $(DBG_INFO_CXX_ALWAYS) $(COMP_OBJ)$@ $^
+
+$(OBJDIR)syscall_iteration$(OBJ_SUFFIX): syscall_iteration.cpp
+	$(APP_CXX) $(APP_CXXFLAGS_NOOPT) $(DBG_INFO_CXX_ALWAYS) $(COMP_OBJ)$@ $^
+
+$(OBJDIR)syscall_app$(EXE_SUFFIX): $(OBJDIR)syscall_app$(OBJ_SUFFIX) $(OBJDIR)syscall_iteration$(OBJ_SUFFIX)
+	$(APP_CXX) $(APP_CXXFLAGS_NOOPT) $(DBG_INFO_CXX_ALWAYS) $(COMP_EXE)$@ $^ $(APP_LDFLAGS_NOOPT) $(APP_LIBS) \
+	  $(CXX_LPATHS) $(CXX_LIBS) $(DBG_INFO_LD_ALWAYS)
+
+$(OBJDIR)big$(OBJ_SUFFIX): big.cpp
+	$(APP_CXX) $(APP_CXXFLAGS_NOOPT) $(DBG_INFO_CXX_ALWAYS) $(COMP_OBJ)$@ $^
+
+$(OBJDIR)big$(EXE_SUFFIX): $(OBJDIR)big$(OBJ_SUFFIX)
+	$(APP_CXX) $(COMP_EXE)$@ $^ $(APP_LDFLAGS_NOOPT) $(APP_LIBS) $(CXX_LPATHS) $(CXX_LIBS) $(DBG_INFO_LD_ALWAYS)
+

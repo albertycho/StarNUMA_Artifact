@@ -1,0 +1,2 @@
+/PATH_TP_TPCC/tpcc-runner/build/bin/tpcc_silo 64 64 288000
+/PATH_TP_TPCC/tpcc-runner/build/bin/tpcc_silo_randwh 64 64 288000

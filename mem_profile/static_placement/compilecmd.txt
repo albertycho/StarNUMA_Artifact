@@ -1,0 +1,1 @@
+g++ -Wall omp_pp_trace.cpp -O3 -fopenmp  -o static_placement

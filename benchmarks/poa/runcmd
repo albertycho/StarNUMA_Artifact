@@ -1,0 +1,1 @@
+/YOUR_PATH/genomicsbench/benchmarks/poa/poa -s /YOUR_PATH/genomicsbench_untar_dir/input-datasets/poa/large/input.fasta -t 64

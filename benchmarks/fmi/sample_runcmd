@@ -1,0 +1,1 @@
+/PATH_TO_GENOMICSBENCH/genomicsbench/benchmarks/fmi/fmi /PATH_TO_GENOMICSBENCH_UNTAR/genomicsbench_untar_dir/input-datasets/fmi/broad /PATH_TO_GENOMICSBENCH_UNTAR/genomicsbench_untar_dir/input-datasets/fmi/large/SRR7733443_10m_1.fastq 512 19 64
