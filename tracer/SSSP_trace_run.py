@@ -7,16 +7,19 @@ import random
 
 
 ##TOMODIFY - your pinpath and tracer path
-pinpath = '~/pin_330/pin-3.30-98830-g1d7b601b3-gcc-linux/pin'
-tracerpath='/TOMODIFY/obj-intel64/combined_tracer_40B_dbg.so'
+pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+#'~/pin_330/pin-3.30-98830-g1d7b601b3-gcc-linux/pin'
+tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+#graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
+wsg_graph_path=gapbs_path+"/benchmark/kron_dummy.wsg"
 
 ### TOMODIFY - replace with path to benchmark
-graph_path = '/TOMODIFY/gapbs/benchmark/kron_30_32/kron_30_32.sg'
-bfs_cmd = '/TOMODIFY/gapbs/bfs -f '+graph_path+' - 20'
+sssp_cmd = gapbs_path+'/sssp -f '+wsg_graph_path+' -n 5'
 
 
-prog_cmd = bfs_cmd
+prog_cmd = sssp_cmd
 
 trace_instsM = 150
 trace_insts = trace_instsM*1000000

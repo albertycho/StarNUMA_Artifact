@@ -25,7 +25,7 @@ def parse_arguments():
 def create_directory(ps, ml, sh, pc):
     sh_str = "ca" if sh == 0 else "sh"
     #dir_name = f"pp_{ps}_{ml}_{sh_str}_{pc}_TH"
-    dir_name = f"pp_{ps}_{ml}_{sh_str}_{pc}"
+    dir_name = f"pp_{ps}_{ml}_{sh_str}_{pc}_TH_EV"
     os.makedirs(dir_name, exist_ok=True)
     return dir_name
 
@@ -50,8 +50,8 @@ def modify_and_copy_regenerate_file(directory, ml,sh,pc):
         shca="SH"
     
     
-    input_dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_Phase\""
-    output_dirname = "\"pagemaps_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+"/\""
+    input_dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_TH_Phase_evict\""
+    output_dirname = "\"pagemaps_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+"_TH_evict/\""
 
     with open(src, 'r') as src_file:
         lines = src_file.readlines()
@@ -89,7 +89,7 @@ def modify_and_copy_hpp_file(directory,ps, ml, sh, pc):
         shca="SH"
     
     
-    dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_Phase\""
+    dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_TH_Phase_evict\""
 
     with open(src, 'r') as src_file:
         lines = src_file.readlines()

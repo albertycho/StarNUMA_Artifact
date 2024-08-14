@@ -89,8 +89,8 @@ struct EdgePair {
 };
 
 // SG = serialized graph, these types are for writing graph to file
-//typedef int32_t SGID;
-typedef int64_t SGID;
+typedef int32_t SGID;
+//typedef int64_t SGID;
 typedef EdgePair<SGID> SGEdge;
 typedef int64_t SGOffset;
 

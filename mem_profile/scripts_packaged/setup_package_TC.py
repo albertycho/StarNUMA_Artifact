@@ -25,13 +25,13 @@ def parse_arguments():
 def create_directory(ps, ml, sh, pc):
     sh_str = "ca" if sh == 0 else "sh"
     #dir_name = f"pp_{ps}_{ml}_{sh_str}_{pc}_TH"
-    dir_name = f"pp_{ps}_{ml}_{sh_str}_{pc}_TH_TC"
+    dir_name = f"pp_{ps}_{ml}_{sh_str}_{pc}_TC"
     os.makedirs(dir_name, exist_ok=True)
     return dir_name
 
 def copy_cpp_file(ps, sh, directory):
     base_dir = "BASE_FILES"
-    cpp_file = "4KBpage_pp.cpp" if ps == 4 else "512KBpage_pp_TH_TC.cpp"
+    cpp_file = "4KBpage_pp.cpp" if ps == 4 else "512KBpage_pp_TC.cpp"
     if ps==512 and sh==1:
         cpp_file = "512KBpage_pp_TC.cpp"
     destfilename = "omp_pp_trace.cpp"
@@ -50,8 +50,8 @@ def modify_and_copy_regenerate_file(directory, ml,sh,pc):
         shca="SH"
     
     
-    input_dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_TH_Phase\""
-    output_dirname = "\"pagemaps_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+"_TH/\""
+    input_dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_Phase\""
+    output_dirname = "\"pagemaps_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+"/\""
 
     with open(src, 'r') as src_file:
         lines = src_file.readlines()
@@ -89,7 +89,7 @@ def modify_and_copy_hpp_file(directory,ps, ml, sh, pc):
         shca="SH"
     
     
-    dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_TH_Phase\""
+    dirname = "\"PP_"+str(ps)+"KB_"+shca+"_"+str(int(ml/1024))+"Kml_"+str(pc)+ "_Phase\""
 
     with open(src, 'r') as src_file:
         lines = src_file.readlines()

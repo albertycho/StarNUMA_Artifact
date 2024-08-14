@@ -43,7 +43,7 @@ tbcpu_fmtstr='TB_CPU {name}({index},{frequency}, &ICN);\n'
 migrator_fmtstr='MIGRATOR mig0(1.0, &ICN);\n'
 
 ## TOMODIFY
-#pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, "/TOMODIFY/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini","/TODMODIFY/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
+#pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, "/TOMODIFY/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini","/TODOMODIFY/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
 pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, "/nethome/acho44/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini","/nethome/acho44/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
 vmem_fmtstr = 'VirtualMemory vmem({attrs[size]}, 1 << 12, {attrs[num_levels]}, 1, {attrs[minor_fault_penalty]});\n'
 icn_sim_fmtstr = 'ICN_SIM ICN("ICN", {attrs[frequency]}, 12, &DRAM);\n'
@@ -789,7 +789,7 @@ with open('Makefile', 'wt') as wfp:
     wfp.write('CPPFLAGS := ' + config_file.get('CPPFLAGS', '') + ' -Iinc -MMD -MP\n')
     wfp.write('LDFLAGS := ' + config_file.get('LDFLAGS', '') + '\n')
     ## TOMODIFY
-    #wfp.write('LDLIBS := ' + config_file.get('LDLIBS', '-L/TOMODIFY/DRAMsim3 -ldramsim3') + '\n')
+    #wfp.write('LDLIBS := ' + config_file.get('LDLIBS', '-L/TODOMODIFY/DRAMsim3 -ldramsim3') + '\n')
     wfp.write('LDLIBS := ' + config_file.get('LDLIBS', '-L/nethome/acho44/DRAMsim3 -ldramsim3') + '\n')
     wfp.write('\n')
     wfp.write('.phony: all clean\n\n')

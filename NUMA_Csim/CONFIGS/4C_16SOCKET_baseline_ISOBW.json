@@ -1,5 +1,5 @@
 {
-    "executable_name": "bin/4C_16S_baseline_ISOBW_keg6",
+    "executable_name": "bin/4C_16S_baseline_ISOBW",
     "block_size": 64,
     "page_size": 4096,
     "heartbeat_frequency": 1000000,

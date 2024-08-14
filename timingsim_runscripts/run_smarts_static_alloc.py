@@ -7,15 +7,15 @@ import sys
 ##            " --tb_cpu_trace_path "+trace_dir_path+" --tb_cpu_forward "+str(tb_forward_i)+" "+cs_trace_path_0 +cs_trace_path_1 +cs_trace_path_2 +cs_trace_path_3
 
 
+sample_count=4
+default_first_phase=2
+tr_path='/PATH_TO/TRACES/BFS/64T_0909/'
+champsim_path = '/PATH_TO_ARTIFACT/NUMA_Csim'
+binname='4C_16S'
+
 NBILLION=1000000000
 NMILLION=1000000
 
-SAMPLE_COUNT=4
-default_first_phase=3
-tr_path='/scratch/acho44/NUMACXL/TRACES/BFS/64T_0909/'
-pagemap_dir="/pagemaps_4KB_CA_256Kml/"
-champsim_path = '/nethome/acho44/NUMA_Csim'
-binname='4C_16S'
 
 def champsim_single_run(bin_path, wi, si, trace_dir_path, phase, iscxl):
     #phase input here refers to 1B insturction phase
@@ -57,17 +57,18 @@ def champsim_single_run(bin_path, wi, si, trace_dir_path, phase, iscxl):
         f.close()
     
 
-    po_dir_prefix=trace_dir_path+pagemap_dir
-    po_dir_name = po_dir_prefix+"/phase"+str(phase)+"_pagemaps/"
-    if(iscxl):
-        po_dir_name = po_dir_prefix+"/phase"+str(phase)+"_pagemaps_CI/"
-
-
-    po_pre_filename = po_dir_name+"/page_owner_pre.txt"
-    po_post_filename = po_dir_name+"/page_owner_post.txt"
-
-    shutil.copy2(po_pre_filename, "page_owner_pre.txt")
-    shutil.copy2(po_post_filename, "page_owner_post.txt")
+    # for static: find page_owner.txt (and CI) from PP_STATIC. use same mapping for all phases, same file for both pre and post
+    po_dir_name = trace_dir_path+ "/PP_STATIC_PLACEMENT0/"                      
+                                                                                
+                                                                                
+    po_pre_filename = po_dir_name+"/page_owner.txt"                             
+    if(iscxl):                                                                  
+        po_pre_filename = po_dir_name+"/page_owner_CI.txt"                      
+                                                                                
+    po_post_filename = po_pre_filename                                          
+                                                                                
+    shutil.copy2(po_pre_filename, "page_owner_pre.txt")                         
+    shutil.copy2(po_post_filename, "page_owner_post.txt")                       
 
     os.system(cs_cmd)
     #print(cs_cmd)
@@ -98,7 +99,7 @@ if __name__ == "__main__":
     print("\tBin Path:", bin_path)                                                  
                                         
     ### TODO do precheck with checkpoint interval and migration interval
-    last_sample_i= (args.checkpoint_interval*SAMPLE_COUNT)+args.first_phase
+    last_sample_i= (args.checkpoint_interval*sample_count)+args.first_phase
     last_trace_path = args.trace_dir_path+"/champsim_0_"+str(last_sample_i)+".trace.xz"
     if not os.path.isfile(last_trace_path):
         #print(f"File {last_trace_path} does not exist")
@@ -111,7 +112,7 @@ if __name__ == "__main__":
     # For now, I'm just using dummy values for the parameters of champsim_single_run.
 
     initial_directory = os.getcwd()
-    for i in range(SAMPLE_COUNT):  # replace ... with your actual range
+    for i in range(sample_count):  # replace ... with your actual range
         # change to initial directory
         os.chdir(initial_directory)
         runphase = int(args.first_phase + (i*args.checkpoint_interval))
