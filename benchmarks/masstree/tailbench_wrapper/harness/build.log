@@ -1,5 +1,1 @@
-g++ -O3 -g -fPIC -std=c++0x -c client.cpp -o client.o
-g++ -O3 -g -fPIC -std=c++0x -c tbench_server_integrated.cpp -o tbench_server_integrated.o
-g++ -O3 -g -fPIC -std=c++0x -c tbench_server_networked.cpp -o tbench_server_networked.o
-g++ -O3 -g -fPIC -std=c++0x -c tbench_client_networked.cpp -o tbench_client_networked.o
-/usr/lib/jvm/java-8-openjdk-amd64/bin/javac tbench/tbench.java
+make: Nothing to be done for 'default'.

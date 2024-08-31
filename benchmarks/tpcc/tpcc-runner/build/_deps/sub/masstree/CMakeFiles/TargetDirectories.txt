@@ -1,0 +1,3 @@
+/scratch/acho44/tpcc-runner/build/_deps/sub/masstree/CMakeFiles/masstree-populate.dir
+/scratch/acho44/tpcc-runner/build/_deps/sub/masstree/CMakeFiles/edit_cache.dir
+/scratch/acho44/tpcc-runner/build/_deps/sub/masstree/CMakeFiles/rebuild_cache.dir

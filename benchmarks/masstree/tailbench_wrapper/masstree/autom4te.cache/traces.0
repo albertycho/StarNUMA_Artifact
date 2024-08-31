@@ -184,6 +184,9 @@ m4trace:configure.ac:11: -1- m4_pattern_allow([^CC$])
 m4trace:configure.ac:11: -1- AC_SUBST([ac_ct_CC])
 m4trace:configure.ac:11: -1- AC_SUBST_TRACE([ac_ct_CC])
 m4trace:configure.ac:11: -1- m4_pattern_allow([^ac_ct_CC$])
+m4trace:configure.ac:11: -1- AC_SUBST([CC])
+m4trace:configure.ac:11: -1- AC_SUBST_TRACE([CC])
+m4trace:configure.ac:11: -1- m4_pattern_allow([^CC$])
 m4trace:configure.ac:11: -1- AC_SUBST([EXEEXT], [$ac_cv_exeext])
 m4trace:configure.ac:11: -1- AC_SUBST_TRACE([EXEEXT])
 m4trace:configure.ac:11: -1- m4_pattern_allow([^EXEEXT$])
@@ -212,7 +215,7 @@ m4trace:configure.ac:12: -1- AC_SUBST([ac_ct_CXX])
 m4trace:configure.ac:12: -1- AC_SUBST_TRACE([ac_ct_CXX])
 m4trace:configure.ac:12: -1- m4_pattern_allow([^ac_ct_CXX$])
 m4trace:configure.ac:13: -1- _m4_warn([obsolete], [The macro `AC_LANG_CPLUSPLUS' is obsolete.
-You should run autoupdate.], [../../lib/autoconf/c.m4:252: AC_LANG_CPLUSPLUS is expanded from...
+You should run autoupdate.], [./lib/autoconf/c.m4:262: AC_LANG_CPLUSPLUS is expanded from...
 configure.ac:13: the top level])
 m4trace:configure.ac:15: -1- AH_OUTPUT([WORDS_BIGENDIAN], [/* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */
@@ -225,43 +228,30 @@ m4trace:configure.ac:15: -1- AH_OUTPUT([WORDS_BIGENDIAN], [/* Define WORDS_BIGEN
 #  undef WORDS_BIGENDIAN
 # endif
 #endif])
-m4trace:configure.ac:15: -1- AC_SUBST([CXXCPP])
-m4trace:configure.ac:15: -1- AC_SUBST_TRACE([CXXCPP])
-m4trace:configure.ac:15: -1- m4_pattern_allow([^CXXCPP$])
-m4trace:configure.ac:15: -1- AC_SUBST([CPPFLAGS])
-m4trace:configure.ac:15: -1- AC_SUBST_TRACE([CPPFLAGS])
-m4trace:configure.ac:15: -1- m4_pattern_allow([^CPPFLAGS$])
-m4trace:configure.ac:15: -1- AC_SUBST([CXXCPP])
-m4trace:configure.ac:15: -1- AC_SUBST_TRACE([CXXCPP])
-m4trace:configure.ac:15: -1- m4_pattern_allow([^CXXCPP$])
-m4trace:configure.ac:15: -1- AC_SUBST([GREP])
-m4trace:configure.ac:15: -1- AC_SUBST_TRACE([GREP])
-m4trace:configure.ac:15: -1- m4_pattern_allow([^GREP$])
-m4trace:configure.ac:15: -1- AC_SUBST([EGREP])
-m4trace:configure.ac:15: -1- AC_SUBST_TRACE([EGREP])
-m4trace:configure.ac:15: -1- m4_pattern_allow([^EGREP$])
-m4trace:configure.ac:15: -1- AC_DEFINE_TRACE_LITERAL([STDC_HEADERS])
-m4trace:configure.ac:15: -1- m4_pattern_allow([^STDC_HEADERS$])
-m4trace:configure.ac:15: -1- AH_OUTPUT([STDC_HEADERS], [/* Define to 1 if you have the ANSI C header files. */
-@%:@undef STDC_HEADERS])
-m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_SYS_TYPES_H], [/* Define to 1 if you have the <sys/types.h> header file. */
-@%:@undef HAVE_SYS_TYPES_H])
-m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_SYS_STAT_H], [/* Define to 1 if you have the <sys/stat.h> header file. */
-@%:@undef HAVE_SYS_STAT_H])
+m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_STDIO_H], [/* Define to 1 if you have the <stdio.h> header file. */
+@%:@undef HAVE_STDIO_H])
 m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_STDLIB_H], [/* Define to 1 if you have the <stdlib.h> header file. */
 @%:@undef HAVE_STDLIB_H])
 m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_STRING_H], [/* Define to 1 if you have the <string.h> header file. */
 @%:@undef HAVE_STRING_H])
-m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_MEMORY_H], [/* Define to 1 if you have the <memory.h> header file. */
-@%:@undef HAVE_MEMORY_H])
-m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_STRINGS_H], [/* Define to 1 if you have the <strings.h> header file. */
-@%:@undef HAVE_STRINGS_H])
 m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_INTTYPES_H], [/* Define to 1 if you have the <inttypes.h> header file. */
 @%:@undef HAVE_INTTYPES_H])
 m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_STDINT_H], [/* Define to 1 if you have the <stdint.h> header file. */
 @%:@undef HAVE_STDINT_H])
+m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_STRINGS_H], [/* Define to 1 if you have the <strings.h> header file. */
+@%:@undef HAVE_STRINGS_H])
+m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_SYS_STAT_H], [/* Define to 1 if you have the <sys/stat.h> header file. */
+@%:@undef HAVE_SYS_STAT_H])
+m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_SYS_TYPES_H], [/* Define to 1 if you have the <sys/types.h> header file. */
+@%:@undef HAVE_SYS_TYPES_H])
 m4trace:configure.ac:15: -1- AH_OUTPUT([HAVE_UNISTD_H], [/* Define to 1 if you have the <unistd.h> header file. */
 @%:@undef HAVE_UNISTD_H])
+m4trace:configure.ac:15: -1- AC_DEFINE_TRACE_LITERAL([STDC_HEADERS])
+m4trace:configure.ac:15: -1- m4_pattern_allow([^STDC_HEADERS$])
+m4trace:configure.ac:15: -1- AH_OUTPUT([STDC_HEADERS], [/* Define to 1 if all of the C90 standard headers exist (not just the ones
+   required in a freestanding environment). This macro is provided for
+   backward compatibility; new code need not use it. */
+@%:@undef STDC_HEADERS])
 m4trace:configure.ac:15: -1- AC_DEFINE_TRACE_LITERAL([ENDIAN_BIG])
 m4trace:configure.ac:15: -1- m4_pattern_allow([^ENDIAN_BIG$])
 m4trace:configure.ac:15: -1- AH_OUTPUT([ENDIAN_BIG], [/* big endian */
@@ -272,8 +262,12 @@ m4trace:configure.ac:15: -1- AH_OUTPUT([ENDIAN_LITTLE], [/* little endian */
 @%:@undef ENDIAN_LITTLE])
 m4trace:configure.ac:20: -1- AH_OUTPUT([HAVE_SYS_EPOLL_H], [/* Define to 1 if you have the <sys/epoll.h> header file. */
 @%:@undef HAVE_SYS_EPOLL_H])
+m4trace:configure.ac:20: -1- AC_DEFINE_TRACE_LITERAL([HAVE_SYS_EPOLL_H])
+m4trace:configure.ac:20: -1- m4_pattern_allow([^HAVE_SYS_EPOLL_H$])
 m4trace:configure.ac:20: -1- AH_OUTPUT([HAVE_NUMA_H], [/* Define to 1 if you have the <numa.h> header file. */
 @%:@undef HAVE_NUMA_H])
+m4trace:configure.ac:20: -1- AC_DEFINE_TRACE_LITERAL([HAVE_NUMA_H])
+m4trace:configure.ac:20: -1- m4_pattern_allow([^HAVE_NUMA_H$])
 m4trace:configure.ac:22: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBNUMA])
 m4trace:configure.ac:22: -1- m4_pattern_allow([^HAVE_LIBNUMA$])
 m4trace:configure.ac:22: -1- AH_OUTPUT([HAVE_LIBNUMA], [/* Define if you have libnuma. */

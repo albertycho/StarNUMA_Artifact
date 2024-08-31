@@ -1,0 +1,237 @@
+[
+{
+  "directory": "/scratch/acho44/tpcc-runner/build",
+  "command": "/usr/bin/c++ -DLOG_LEVEL=0 -I/scratch/acho44/tpcc-runner -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -I/scratch/acho44/tpcc-runner/build/_deps/src -Ofast -DNDEBUG -Werror -Wall -Wextra -fPIC -std=c++17 -o CMakeFiles/tpccrunner_objlib.dir/benchmarks/tpcc/src/record_layout.cpp.o -c /scratch/acho44/tpcc-runner/benchmarks/tpcc/src/record_layout.cpp",
+  "file": "/scratch/acho44/tpcc-runner/benchmarks/tpcc/src/record_layout.cpp"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build",
+  "command": "/usr/bin/c++ -DLOG_LEVEL=0 -Dtpcc_silo_EXPORTS -I/scratch/acho44/tpcc-runner -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -I/scratch/acho44/tpcc-runner/build/_deps/src -Ofast -DNDEBUG -pthread -Werror -Wall -Wextra -fPIC -std=c++17 -o CMakeFiles/tpcc_silo.dir/executables/tpcc_silo.cpp.o -c /scratch/acho44/tpcc-runner/executables/tpcc_silo.cpp",
+  "file": "/scratch/acho44/tpcc-runner/executables/tpcc_silo.cpp"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/cc  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -O3 -DNDEBUG -Werror -Wall -Wextra -fPIC -o CMakeFiles/masstree_obj2.dir/clp.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/clp.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/clp.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/json.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/json.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/json.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/string.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/string.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/string.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/straccum.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/straccum.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/straccum.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/str.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/str.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/str.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/msgpack.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/msgpack.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/msgpack.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/kvrandom.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/kvrandom.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/kvrandom.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/compiler.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/compiler.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/compiler.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/memdebug.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/memdebug.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/memdebug.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/masstree",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/masstree -Ofast -DNDEBUG -include /scratch/acho44/tpcc-runner/build/_deps/src/masstree/config.h -Werror -Wall -Wextra -fPIC -std=c++11 -o CMakeFiles/masstree_obj1.dir/kvthread.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/masstree/kvthread.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/masstree/kvthread.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/stats.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/stats.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/stats.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/random.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/random.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/random.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/os.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/os.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/os.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/bitmap.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/bitmap.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/bitmap.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/arena.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/arena.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/arena.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/region.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/region.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/region.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/segment.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/segment.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/segment.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/page.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/page.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/page.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/alloc.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/alloc-aligned.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-aligned.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-aligned.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/alloc-posix.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-posix.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-posix.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/heap.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/heap.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/heap.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/options.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/options.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/options.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_SHARED_LIB -DMI_SHARED_LIB_EXPORT -Dmimalloc_EXPORTS -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc.dir/src/init.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/init.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/init.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/stats.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/stats.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/stats.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/random.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/random.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/random.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/os.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/os.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/os.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/bitmap.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/bitmap.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/bitmap.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/arena.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/arena.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/arena.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/region.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/region.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/region.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/segment.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/segment.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/segment.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/page.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/page.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/page.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/alloc.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/alloc-aligned.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-aligned.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-aligned.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/alloc-posix.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-posix.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/alloc-posix.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/heap.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/heap.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/heap.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/options.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/options.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/options.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -DMI_STATIC_LIB -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-static.dir/src/init.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/init.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/init.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc -DMI_MALLOC_OVERRIDE -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -fPIC -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-obj.dir/src/static.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/static.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/src/static.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc  -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-test-api.dir/test/test-api.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/test/test-api.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/test/test-api.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/mimalloc",
+  "command": "/usr/bin/cc  -I/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/include -O3 -DNDEBUG -Wall -Wextra -Wno-unknown-pragmas -fvisibility=hidden -Wno-invalid-memory-model -ftls-model=initial-exec -std=gnu11 -o CMakeFiles/mimalloc-test-stress.dir/test/test-stress.c.o -c /scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/test/test-stress.c",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/mimalloc/test/test-stress.c"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/googletest/googlemock",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock/include -I/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/include -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest -Ofast -DNDEBUG -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock/src/gmock-all.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/googletest/googlemock",
+  "command": "/usr/bin/c++  -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock/include -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/include -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest -Ofast -DNDEBUG -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock/src/gmock_main.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/googletest/googletest",
+  "command": "/usr/bin/c++  -I/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/include -I/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest -Ofast -DNDEBUG -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/src/gtest-all.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/scratch/acho44/tpcc-runner/build/_deps/build/googletest/googletest",
+  "command": "/usr/bin/c++  -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/include -isystem /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest -Ofast -DNDEBUG -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++17 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/src/gtest_main.cc",
+  "file": "/scratch/acho44/tpcc-runner/build/_deps/src/googletest/googletest/src/gtest_main.cc"
+}
+]
