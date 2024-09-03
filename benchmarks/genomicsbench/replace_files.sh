@@ -20,7 +20,7 @@ echo 'calling make'
 # Run make
 make
 
-cd "$GENOMICSBENCH_PATH/benchmakrs/fmi"
+cd "$GENOMICSBENCH_PATH/benchmarks/fmi"
 make
 cd "../.."
 cd "$GENOMICSBENCH_PATH/benchmarks/poa"

@@ -7,7 +7,7 @@ STARNUMA_ARTIFACT_PATH=${STARNUMA_ARTIFACT_PATH:?Environment variable STARNUMA_A
 # Copy files
 cp "$STARNUMA_ARTIFACT_PATH/benchmarks/genomicsbench/fmi/fmi.cpp" "$GENOMICSBENCH_PATH/benchmarks/fmi/fmi.cpp"
 cp "$STARNUMA_ARTIFACT_PATH/benchmarks/genomicsbench/poa/msa_spoa_omp.cpp" "$GENOMICSBENCH_PATH/benchmarks/poa/msa_spoa_omp.cpp"
-cp "$STARNUMA_ARTIFACT_PATH/benchmarks/genomicsbench/utils.h" "$GENOMICSBENCH_PATH/benchmarks/tools/bwa-mem2/src/utils.h"
+cp "$STARNUMA_ARTIFACT_PATH/benchmarks/genomicsbench/utils.h" "$GENOMICSBENCH_PATH/tools/bwa-mem2/src/utils.h"
 echo 'copied files'
 
 # Change directory to GENOMICSBENCH_PATH
@@ -21,7 +21,7 @@ echo 'calling make'
 # Run make
 make
 
-cd "$GENOMICSBENCH_PATH/benchmakrs/fmi"
+cd "$GENOMICSBENCH_PATH/benchmarks/fmi"
 make
 cd "../.."
 cd "$GENOMICSBENCH_PATH/benchmarks/poa"
