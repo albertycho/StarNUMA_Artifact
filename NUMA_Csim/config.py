@@ -31,6 +31,10 @@ fname_translation_table = str.maketrans('./-','_DH')
 def norm_fname(fname):
     return os.path.relpath(os.path.expandvars(os.path.expanduser(fname)))
 
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH', '/StarNUMA_Artifact')
+#inidir_path = starnuma_artifact_path + '/NUMA_Csim/dramsim3_ini/'
+dramsim3_path = starnuma_artifact_path + '/DRAMsim3/'
+
 ###
 # Begin format strings
 ###
@@ -43,8 +47,9 @@ tbcpu_fmtstr='TB_CPU {name}({index},{frequency}, &ICN);\n'
 migrator_fmtstr='MIGRATOR mig0(1.0, &ICN);\n'
 
 ## TOMODIFY
-#pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, "/TOMODIFY/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini","/TODOMODIFY/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
-pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, "/nethome/acho44/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini","/nethome/acho44/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
+pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, "'+ starnuma_artifact_path+'/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini", "'+starnuma_artifact_path+ '/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
+#pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, '+ starnuma_artifact_path+"/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini",starnuma_artifact_path+ "/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
+#pmem_fmtstr = 'HMEM DRAM({attrs[frequency]}, "/nethome/acho44/NUMA_Csim/dramsim3_ini/DDR5_128GB_16ch_4800.ini","/nethome/acho44/NUMA_Csim/dramsim3_ini/DDR5_128GB_2ch_4800.ini", "./");\n'
 vmem_fmtstr = 'VirtualMemory vmem({attrs[size]}, 1 << 12, {attrs[num_levels]}, 1, {attrs[minor_fault_penalty]});\n'
 icn_sim_fmtstr = 'ICN_SIM ICN("ICN", {attrs[frequency]}, 12, &DRAM);\n'
 
@@ -788,9 +793,8 @@ with open('Makefile', 'wt') as wfp:
     wfp.write('CXXFLAGS := ' + config_file.get('CXXFLAGS', '-Wall -O3') + ' -std=c++17\n')
     wfp.write('CPPFLAGS := ' + config_file.get('CPPFLAGS', '') + ' -Iinc -MMD -MP\n')
     wfp.write('LDFLAGS := ' + config_file.get('LDFLAGS', '') + '\n')
-    ## TOMODIFY
-    #wfp.write('LDLIBS := ' + config_file.get('LDLIBS', '-L/TODOMODIFY/DRAMsim3 -ldramsim3') + '\n')
-    wfp.write('LDLIBS := ' + config_file.get('LDLIBS', '-L/nethome/acho44/DRAMsim3 -ldramsim3') + '\n')
+    ## TODO set DRAMSIM3_PATH
+    wfp.write('LDLIBS := -L' + dramsim3_path + ' -ldramsim3\n')
     wfp.write('\n')
     wfp.write('.phony: all clean\n\n')
     wfp.write('all: ' + config_file['executable_name'] + '\n\n')

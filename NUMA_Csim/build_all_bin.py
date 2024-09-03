@@ -1,6 +1,20 @@
 import os
 import subprocess
 
+
+import os
+
+# Add dramsim path to LD_LIBRARY_PATH
+starnuma_artifact_path = os.environ.get('STARNUMA_ARTIFACT_PATH')
+if starnuma_artifact_path:
+    current_ld_library_path = os.environ.get('LD_LIBRARY_PATH', '')
+    new_path = f'{starnuma_artifact_path}/DRAMsim3/'
+    os.environ['LD_LIBRARY_PATH'] = new_path + ':' + current_ld_library_path
+    print(os.environ['LD_LIBRARY_PATH'])
+else:
+    print("STARNUMA_ARTIFACT_PATH is not set.")
+
+
 # Directory containing the configuration files
 configs_dir = 'CONFIGS'
 
