@@ -11,11 +11,10 @@ pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+poa_path = os.getenv('POA_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+input_path= os.getenv('GENOMICS_INPUT_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
-
-# TODO the following variables must be modified
-poa_path="path/to/poa"
-poa_input_path="path/to/input-datasets/poa/large/input16X.fasta"
+poa_input_path=input_path+"/poa/large/input16X.fasta"
 
 
 poa_cmd = poa_path+" -s "+poa_input_path+" -t 64"

@@ -11,12 +11,12 @@ pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+fmi_path= os.getenv('FMI_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+input_path= os.getenv('GENOMICS_INPUT_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
 
-# TODO the following variables must be modified
-fmi_path="path/to/fmi"
-fmi_input_path="path/to/input-datasets/fmi/broad"
-fmi_input_path_fastq="path/to/input-datasets/fmi/large/SRR7733443_10m_1.fastq"
+fmi_input_path=input_path+"/fmi/broad"
+fmi_input_path_fastq=input_path+"/fmi/large/SRR7733443_10m_1.fastq"
 
 
 fmi_cmd = fmi_path+" "+fmi_input_path+" "+fmi_input_path_fastq+" 512 19 64"

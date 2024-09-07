@@ -11,9 +11,8 @@ pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+masstree_path= os.getenv('MASSTREE_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
-#TODO update this
-masstree_path="path/to/bin/masstree"
 
 masstree_prefix = 'BENCH_QPS=2000 TBENCH_MAXREQS=5000000 '                      
 masstree_cmd = masstree_path+' -j66 mycsba masstree'

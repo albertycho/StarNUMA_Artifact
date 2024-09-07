@@ -11,9 +11,7 @@ pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
-
-
-tpcc_path="path/to/bin/tpcc"
+tpcc_path= os.getenv('TPCC_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
 
 tpcc_cmd = tpcc_path+" 64 64 288000"
