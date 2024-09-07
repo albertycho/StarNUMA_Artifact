@@ -4,41 +4,43 @@ import os
 import sys
 
 
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
+
 directories = ["BFS", "CC", "SSSP", "FMI", "MASST", "TPCC","POA"]
 
-BFS_TRACE_PATH = "/scratch/acho44/NUMACXL/TRACES/BFS/64T_0909/"
+BFS_TRACE_PATH = starnuma_artifact_path+"/tracer/TRACES/BFS/"
 BFS_SAMPLE_COUNT = 1
 BFS_START_PHASE = 2
 
-CC_TRACE_PATH = "cc_trace_path"
+CC_TRACE_PATH = = starnuma_artifact_path+"/tracer/TRACES/CC/"
 CC_SAMPLE_COUNT = 1
 CC_START_PHASE = 1
 
-SSSP_TRACE_PATH = "sssp_trace_path"
+SSSP_TRACE_PATH = starnuma_artifact_path+"/tracer/TRACES/SSSP/"
 SSSP_SAMPLE_COUNT = 1
 SSSP_START_PHASE = 1
 
-FMI_TRACE_PATH = "fmi_trace_path"
+FMI_TRACE_PATH = = starnuma_artifact_path+"/tracer/TRACES/FMI/"
 FMI_SAMPLE_COUNT = 1
 FMI_START_PHASE = 1
 
-MASST_TRACE_PATH = "masst_trace_path"
+MASST_TRACE_PATH= starnuma_artifact_path+"/tracer/TRACES/MASST/"
 MASST_SAMPLE_COUNT = 1
 MASST_START_PHASE = 1
 
-TPCC_TRACE_PATH = "tpcc_trace_path"
+TPCC_TRACE_PATH =  starnuma_artifact_path+"/tracer/TRACES/TPCC/"
 TPCC_SAMPLE_COUNT = 1
 TPCC_START_PHASE = 1
 
-POA_TRACE_PATH = "poa_trace_path"
+POA_TRACE_PATH =  starnuma_artifact_path+"/tracer/TRACES/POA/"
 POA_SAMPLE_COUNT = 1
 POA_START_PHASE = 1
 
 
-champsim_path = '/nethome/acho44/StarNUMA_Artifact/StarNUMA_Artifact/NUMA_Csim'
-top_dir_path = '/nethome/acho44/StarNUMA_Artifact/StarNUMA_Artifact/EX_DIR_HIER_TMP/'
-base_run_smart_py_path = '/nethome/acho44/StarNUMA_Artifact/StarNUMA_Artifact/timingsim_runscripts/run_smarts.py'
-base_run_smart_static_alloc_py_path="/nethome/acho44/StarNUMA_Artifact/StarNUMA_Artifact/timingsim_runscripts/run_smarts_static_alloc.py"
+champsim_path = starnuma_artifact_path+'/NUMA_Csim'
+top_dir_path = starnuma_artifact_path+'/EX_DIR_HIER_TMP/'
+base_run_smart_py_path =  starnuma_artifact_path+'/timingsim_runscripts/run_smarts.py'
+base_run_smart_static_alloc_py_path= starnuma_artifact_path "/timingsim_runscripts/run_smarts_static_alloc.py"
 
 def process_directories():
     # Define a dictionary to simulate a case statement with multiple variables
