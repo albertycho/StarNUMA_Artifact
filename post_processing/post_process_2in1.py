@@ -1,13 +1,14 @@
 import os
 import subprocess
 
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
+
 # Define your top directory and the list of benchmarks
-top_dir = '/path/to/top_dir'  # Update this path
-top_dir = '/scratch/acho44/NUMACXL/CS_RUNS/EX_DIR_HIER_dummy/'  # Update this path
+top_dir = starnuma_artifact_path+'EX_DIR_HIER'
 
 # Predefined script paths - Update these
-script1 = '/nethome/acho44/StarNUMA_Artifact/StarNUMA_Artifact/post_processing/extract_smarts_stat_per_benchmark.py'
-script2 = '/nethome/acho44/StarNUMA_Artifact/StarNUMA_Artifact/post_processing/collect_smart_stats_top.py'
+script1 = starnuma_artifact_path+ '/post_processing/extract_smarts_stat_per_benchmark.py'
+script2 = starnuma_artifact_path+ '/post_processing/collect_smart_stats_top.py'
 benchmarks = ["BFS", "CC", "SSSP", "FMI", "MASST", "TPCC", "POA"]
 
 

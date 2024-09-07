@@ -16,6 +16,18 @@ input_path= os.getenv('GENOMICS_INPUT_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
 poa_input_path=input_path+"/poa/large/input16X.fasta"
 
+# Get the environment variable
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
+
+# Construct the path you want to change to
+target_directory = os.path.join(starnuma_artifact_path, 'tracer', 'TRACES', 'POA')
+
+# Change to the target directory
+os.chdir(target_directory)
+
+print(f"Changed directory to: {os.getcwd()}")
+
+
 
 poa_cmd = poa_path+" -s "+poa_input_path+" -t 64"
 

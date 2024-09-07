@@ -12,10 +12,16 @@ pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
-#'/TOMODIFY/obj-intel64/combined_tracer_40B_dbg.so'
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
 
+# Construct the path you want to change to
+target_directory = os.path.join(starnuma_artifact_path, 'tracer', 'TRACES', 'CC')
 
-### TOMODIFY - replace with path to benchmark
+# Change to the target directory
+os.chdir(target_directory)
+
+print(f"Changed directory to: {os.getcwd()}")
+
 cc_cmd = gapbs_path+'/cc -f '+graph_path+' - 5'
 
 

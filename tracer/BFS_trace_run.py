@@ -12,10 +12,8 @@ pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
-#'/TOMODIFY/obj-intel64/combined_tracer_40B_dbg.so'
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
 
-
-### TOMODIFY - replace with path to benchmark
 bfs_cmd = gapbs_path+'/bfs -f '+graph_path+' - 20'
 
 
@@ -23,6 +21,12 @@ prog_cmd = bfs_cmd
 
 trace_instsM = 150
 trace_insts = trace_instsM*1000000
+
+# Construct the path you want to change to
+target_directory = os.path.join(starnuma_artifact_path, 'tracer', 'TRACES', 'BFS')
+
+# Change to the target directory
+os.chdir(target_directory)
 
 ## do not use -startFF unless benchmark is modified with ROI magic instruction
 cmd = pinpath+' -t '+tracerpath+' -startFF -t '+str(trace_insts)+ ' -- '+prog_cmd

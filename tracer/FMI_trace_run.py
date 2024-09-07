@@ -19,6 +19,19 @@ fmi_input_path=input_path+"/fmi/broad"
 fmi_input_path_fastq=input_path+"/fmi/large/SRR7733443_10m_1.fastq"
 
 
+
+# Get the environment variable
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
+
+# Construct the path you want to change to
+target_directory = os.path.join(starnuma_artifact_path, 'tracer', 'TRACES', 'FMI')
+
+# Change to the target directory
+os.chdir(target_directory)
+
+print(f"Changed directory to: {os.getcwd()}")
+
+
 fmi_cmd = fmi_path+" "+fmi_input_path+" "+fmi_input_path_fastq+" 512 19 64"
 
 

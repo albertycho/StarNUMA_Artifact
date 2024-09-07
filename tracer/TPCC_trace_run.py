@@ -13,6 +13,18 @@ graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 tpcc_path= os.getenv('TPCC_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
+# Get the environment variable
+starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
+
+# Construct the path you want to change to
+target_directory = os.path.join(starnuma_artifact_path, 'tracer', 'TRACES', 'TPCC')
+
+# Change to the target directory
+os.chdir(target_directory)
+
+print(f"Changed directory to: {os.getcwd()}")
+
+
 
 tpcc_cmd = tpcc_path+" 64 64 288000"
 
