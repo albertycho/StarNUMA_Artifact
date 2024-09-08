@@ -2,7 +2,7 @@ import argparse
 import shutil
 import os
 import sys
-
+import csv
 
 starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
 
@@ -10,9 +10,9 @@ directories = ["BFS", "CC", "SSSP", "FMI", "MASST", "TPCC","POA"]
 
 BFS_TRACE_PATH = starnuma_artifact_path+"/tracer/TRACES/BFS/"
 BFS_SAMPLE_COUNT = 1
-BFS_START_PHASE = 2
+BFS_START_PHASE = 1
 
-CC_TRACE_PATH = = starnuma_artifact_path+"/tracer/TRACES/CC/"
+CC_TRACE_PATH = starnuma_artifact_path+"/tracer/TRACES/CC/"
 CC_SAMPLE_COUNT = 1
 CC_START_PHASE = 1
 
@@ -20,7 +20,7 @@ SSSP_TRACE_PATH = starnuma_artifact_path+"/tracer/TRACES/SSSP/"
 SSSP_SAMPLE_COUNT = 1
 SSSP_START_PHASE = 1
 
-FMI_TRACE_PATH = = starnuma_artifact_path+"/tracer/TRACES/FMI/"
+FMI_TRACE_PATH = starnuma_artifact_path+"/tracer/TRACES/FMI/"
 FMI_SAMPLE_COUNT = 1
 FMI_START_PHASE = 1
 
@@ -36,11 +36,34 @@ POA_TRACE_PATH =  starnuma_artifact_path+"/tracer/TRACES/POA/"
 POA_SAMPLE_COUNT = 1
 POA_START_PHASE = 1
 
+# Path to the n_phases.csv file
+n_phases_csv_path = os.path.join(starnuma_artifact_path, 'tracer', 'TRACES', 'n_phases.csv')
+
+# Dictionary to store the sample counts for each benchmark
+sample_counts = {}
+
+# Read the n_phases.csv file and populate the sample_counts dictionary
+with open(n_phases_csv_path, mode='r') as file:
+    csv_reader = csv.reader(file)
+    for row in csv_reader:
+        if len(row) == 2:
+            benchmark, sample_count = row
+            sample_counts[benchmark] = int(sample_count)
+
+# Now, replace the *_SAMPLE_COUNT values based on the n_phases.csv file
+BFS_SAMPLE_COUNT = sample_counts.get('BFS', BFS_SAMPLE_COUNT)
+CC_SAMPLE_COUNT = sample_counts.get('CC', CC_SAMPLE_COUNT)
+SSSP_SAMPLE_COUNT = sample_counts.get('SSSP', SSSP_SAMPLE_COUNT)
+FMI_SAMPLE_COUNT = sample_counts.get('FMI', FMI_SAMPLE_COUNT)
+MASST_SAMPLE_COUNT = sample_counts.get('MASSTREE', MASST_SAMPLE_COUNT)  # Ensure correct naming in n_phases.csv
+TPCC_SAMPLE_COUNT = sample_counts.get('TPCC', TPCC_SAMPLE_COUNT)
+POA_SAMPLE_COUNT = sample_counts.get('POA', POA_SAMPLE_COUNT)
+
 
 champsim_path = starnuma_artifact_path+'/NUMA_Csim'
-top_dir_path = starnuma_artifact_path+'/EX_DIR_HIER_TMP/'
+top_dir_path = starnuma_artifact_path+'/EX_DIR_HIER/'
 base_run_smart_py_path =  starnuma_artifact_path+'/timingsim_runscripts/run_smarts.py'
-base_run_smart_static_alloc_py_path= starnuma_artifact_path "/timingsim_runscripts/run_smarts_static_alloc.py"
+base_run_smart_static_alloc_py_path= starnuma_artifact_path+ '/timingsim_runscripts/run_smarts_static_alloc.py'
 
 def process_directories():
     # Define a dictionary to simulate a case statement with multiple variables
