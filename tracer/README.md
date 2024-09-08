@@ -1,4 +1,10 @@
-environment variables:
+## Compiling Tracer
+Set
+export PIN_ROOT=your_path_to/StarNUMA_Artifacts/pin-3.30-98830-g1d7b601b3-gcc-linux.
+Inside pin_tracer, call 
+make obj-intel64/combined_tracer.so
+
+## Environment Variables:
 • SNUMA_PINPATH: path to the pin binary
 • SNUMA_TRACER_PATH: Path to the compiled combined tracer.so
 • SNUMA_GRAPH_PATH: This is just for graph benchmarks.
@@ -16,7 +22,7 @@ nomicsbench.
 • TPCC_PATH: path to tpcc binary.
 
 
-Tracer outputs:
+## Tracer outputs:
 • champsim_[i]_[j].trace where i is the thread-id and j is the
 phase number, where a phase is defined by 1 billion instruc-
 tions. These files are instructions traces used in timing simula-
