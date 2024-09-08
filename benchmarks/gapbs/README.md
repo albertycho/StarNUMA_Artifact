@@ -1,3 +1,10 @@
+# Setup
+Call make to generate binaries (bfs, cc, sssp, tc, etc)
+
+Call make bench-graphs to generate to required graphs for StarNUMA.
+
+The rest of README is from the original GAPBS github repo.
+
 GAP Benchmark Suite [![Build Status](https://github.com/sbeamer/gapbs/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/sbeamer/gapbs/actions/workflows/c-cpp.yml)
 ===================
 

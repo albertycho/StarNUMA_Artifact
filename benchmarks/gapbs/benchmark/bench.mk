@@ -86,6 +86,7 @@ $(GRAPH_DIR)/webU.sg: $(RAW_GRAPH_DIR)/sk-2005/sk-2005.mtx converter
 # Synthetic
 
 KRON_ARGS = -g28 -k32
+#KRON_ARGS = -g4 -k32
 $(GRAPH_DIR)/kron.sg: converter
 	./converter $(KRON_ARGS) -b $@
 
