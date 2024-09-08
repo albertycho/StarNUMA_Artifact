@@ -1,7 +1,9 @@
 # tpcc-runner
 ​
 setup_build.sh should generate the binary in build/bin.
+
 The rest of this file is from original github repo by rotaki.
+
 ​
 An implementation of various in-memory concurrency control protocols by Riki Otaki. To evaluate in-memory concurrency control comprehensively, tpcc-runner aims to provide an Open Source C++ implementation of in-memory concurrency control protocols with full functionality (read, update, insert, delete, range scan, (blind) write, range queries).
 ​
