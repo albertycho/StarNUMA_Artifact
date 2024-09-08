@@ -1,8 +1,14 @@
 ## Compiling Tracer
 Set
-\\export PIN_ROOT=your_path_to/StarNUMA_Artifacts/pin-3.30-98830-g1d7b601b3-gcc-linux.
+
+export PIN_ROOT=your_path_to/StarNUMA_Artifacts/pin-3.30-98830-g1d7b601b3-gcc-linux.
+
 Inside pin_tracer, call 
-\\make obj-intel64/combined_tracer.so
+
+make obj-intel64/combined_tracer.so
+
+## Post Run
+tracer/TRACES/get_all_completed_phases.py must be ran to get number of completed phases. The output n_phases.csv required for scripts in timing simulation runs.
 
 ## Environment Variables:
 • SNUMA_PINPATH: path to the pin binary
