@@ -6,7 +6,7 @@ import argparse
 import random
 
 
-pinpath = os.getenv('SNUMAPINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
+pinpath = os.getenv('SNUMA_PINPATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 #'~/pin_330/pin-3.30-98830-g1d7b601b3-gcc-linux/pin'
 tracerpath= os.getenv('SNUMA_TRACER_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 graph_path= os.getenv('SNUMA_GRAPH_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
@@ -14,7 +14,7 @@ gapbs_path= os.getenv('SNUMA_GAPBS_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 poa_path = os.getenv('POA_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 input_path= os.getenv('GENOMICS_INPUT_PATH', 'YOU_NEED_TO_SET_IT_WITH_EXPORT')
 
-poa_input_path=input_path+"/poa/large/input16X.fasta"
+poa_input_path=input_path+"/poa/large/input.fasta"
 
 # Get the environment variable
 starnuma_artifact_path = os.getenv('STARNUMA_ARTIFACT_PATH')
